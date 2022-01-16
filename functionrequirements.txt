@@ -1,0 +1,8 @@
+Basic CRUD Functionalities:
+○ Add Product : Create inventory items
+○ Update Product : Edit Them
+○ Delete Product : Delete Them
+○ Show Products : View a list of them
+
+Additional Functionality:
+○ Export Data to CSV : Download Product data to CSV
