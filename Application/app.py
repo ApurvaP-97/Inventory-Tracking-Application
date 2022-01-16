@@ -191,39 +191,6 @@ def showall():
         flash(e)
         return render_template('index.html')
 
-
-@app.route('/showbyname', methods=['POST'])
-def showbyname():
-    try:
-        prodname = request.form['searchprod']
-        if prodname == "":
-            flash('Please fill out the search field ')
-            return render_template('index.html')
-        else:
-            if request.method == 'POST':
-                mydb = sqlite3.connect('inventory.db')
-                mycursor = mydb.cursor()
-                if request.method == 'POST':
-                    mycursor.execute("SELECT COUNT(1) FROM inventoryDetails WHERE productName = '%s'" % prodname)
-                    if mycursor.fetchone()[0]:
-                        mycursor.execute("SELECT * FROM inventoryDetails WHERE productName ='%s'" % prodname)
-                        prod = mycursor.fetchall()
-                        flash(prodname + ' Found!')
-                        return render_template('index.html', prodnames=prod)
-                    else:
-                        flash('There no such product as ' + prodname)
-                    return render_template('index.html')
-                else:
-                    flash('There no such product as ' + prodname)
-                    return render_template('index.html')
-            else:
-                return render_template('index.html')
-
-    except Exception as e:
-        flash(e)
-        return render_template('index.html')
-
-
 @app.route('/exportDatatoCSV', methods=['POST'])
 def exportDatatoCSV():
     try:
