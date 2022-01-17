@@ -4,7 +4,7 @@ db = sqlite3.connect('inventory.db')
 cursor = db.cursor()
 cursor.execute('''CREATE TABLE IF NOT EXISTS logincredentials
                (UserName text, Password text)''')
-cursor.execute("INSERT INTO logincredentials Values('Apurva','Shopify')")
+cursor.execute("INSERT INTO logincredentials Values('admin','admin')")
 cursor.execute('''DROP TABLE inventoryDetails''')
 cursor.execute('''CREATE TABLE IF NOT EXISTS inventoryDetails
                (ProductID INTEGER PRIMARY KEY UNIQUE, ProductName text, Price real, Qty integer)''')
