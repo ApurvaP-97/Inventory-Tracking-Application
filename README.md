@@ -19,5 +19,7 @@ The inventory dashboard has the following basic functionalities:
 4. View All Products : Click on this to view the inventory details
 5. Export Product Data to CSV : Click on this to export the inventory details to CSV. A file : inventoryTable.csv will be downloaded to the Application folder in the backend
 
+<img width="1439" alt="Screen Shot 2022-01-17 at 4 20 26 PM" src="https://user-images.githubusercontent.com/54936708/149843232-37e452dd-cd2c-4dc8-a1e1-ad3eb7cb596a.png">
+<img width="1439" alt="Screen Shot 2022-01-17 at 4 19 53 PM" src="https://user-images.githubusercontent.com/54936708/149843224-d99147fb-8dce-4b6b-96ae-c322514e7881.png">
 
 
